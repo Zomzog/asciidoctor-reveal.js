@@ -36,7 +36,7 @@
     / See https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#iframe
     iframe(width=(width) height=(height) src=src
       frameborder=0 allowfullscreen=!(option? 'nofullscreen')
-      data-autoplay=(option? 'autoplay')
+      data-autoplay=((option? 'autoplay') ? "1" : nil)
       allow=((option? 'autoplay') ? "autoplay" : nil))
   - else
     video(src=media_uri(attr :target) width=(width) height=(height)
